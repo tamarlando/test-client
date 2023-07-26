@@ -17,22 +17,25 @@ export class LoginService extends BaseService {
   private currentUser: User;
   
   get(form: { userName: string, password: string, chatId: string }): Observable<User> {
-    this.currentUser = {
-      id: "ccc",
-      name: "יוסי",
-      role: Role.judge,
-      permission: Permission.other
-    };
+    // this.currentUser = {
+    //   id: "ccc",
+    //   name: "יוסי",
+    //   role: Role.judge,
+    //   permission: Permission.other
+    // };
 
-    return of({
-      id: "ccc",
-      name: "יוסי",
-      role: Role.judge,
-      permission: Permission.other
-    });
-    // return this.httpClient.get<User>(`${this.baseUrl}/Login/${form.userName}/${form.password}/${form.chatId}`).subscribe(user => this.currentUser = user);
+    // return of({
+    //   id: "ccc",
+    //   name: "יוסי",
+    //   role: Role.judge,
+    //   permission: Permission.other
+    // });
+    return this.httpClient.get<User>(`${this.baseUrl}/Login/${form.userName}/${form.password}/${form.chatId}`);
   }
   getCurrentUser(): User {
     return this.currentUser;
+  }
+  setCurrentUser(user:User): void {
+     this.currentUser = user;
   }
 }

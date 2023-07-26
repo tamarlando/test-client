@@ -14,12 +14,12 @@ export class ChatDetailsService extends BaseService {
   }
 
   get(chatId: string): Observable<ChatDetails> {
-    return of({
+    /*return of({
       id: "assf-fgmidoutirn",
       name: "test1",
       description: "test description",
       number: "aas-000-sn"
-    });
-    // return this.httpClient.get<ChatDetails>(`${this.baseUrl}/ChatDetails/${chatId}`);
+    });*/
+     return this.httpClient.get<ChatDetails>(`${this.baseUrl}/ChatDetails/${chatId}`);
   }
 }

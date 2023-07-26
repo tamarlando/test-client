@@ -14,6 +14,7 @@ import { MainComponent } from './components/main/main.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PermissionPipe } from './pipes/permission.pipe';
+import { ParticipantsComponent } from './components/participants/participants.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PermissionPipe } from './pipes/permission.pipe';
     ChatDetailsComponent,
     LoginComponent,
     MainComponent,
-    PermissionPipe
+    PermissionPipe,
+    ParticipantsComponent
     
   ],
   imports: [

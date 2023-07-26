@@ -3,10 +3,9 @@
   <div><app-menu [participantCount]="participants.length"></app-menu></div>
   <div>
     <app-chat-details [chatDetails]="chatDetails"></app-chat-details>
-    <div *ngFor="let participant of participants">
+    <router-outlet></router-outlet>
 
-      <app-chat [participant]="participant"></app-chat>
-    </div>
+   
   </div>
 </div>
 </div>

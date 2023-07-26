@@ -23,8 +23,9 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
-    this.loginService.get(this.userForm.value).subscribe(_ =>
+    this.loginService.get(this.userForm.value).subscribe(user => {
+      this.loginService.setCurrentUser(user);
       this.router.navigate(['/chat', this.userForm.value['chatId']])
-    );
+    });
   }
 }

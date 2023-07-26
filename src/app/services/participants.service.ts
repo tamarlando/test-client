@@ -16,22 +16,22 @@ export class ParticipantsService extends BaseService {
   }
 
   get(chatId: string): Observable<User[]> {
-    return of([{
-      id: "aaa",
-      name: "יוסי לוי",
-      role: Role.judge,
-      permission: Permission.admin
-    }, {
-      id: "bbbb",
-      name: "ישראל כהן",
-      role: Role.represents,
-      permission: Permission.other
-    }, {
-      id: "ccc",
-      name: "רפאל רפאלי",
-      role: Role.trapping,
-      permission: Permission.other
-    }]);
-    // return this.httpClient.get<User[]>(`${this.baseUrl}/Participants/${chatId}`);
+    // return of([{
+    //   id: "aaa",
+    //   name: "יוסי לוי",
+    //   role: Role.judge,
+    //   permission: Permission.admin
+    // }, {
+    //   id: "bbbb",
+    //   name: "ישראל כהן",
+    //   role: Role.represents,
+    //   permission: Permission.other
+    // }, {
+    //   id: "ccc",
+    //   name: "רפאל רפאלי",
+    //   role: Role.trapping,
+    //   permission: Permission.other
+    // }]);
+    return this.httpClient.get<User[]>(`${this.baseUrl}/Participants/${chatId}`);
   }
 }
