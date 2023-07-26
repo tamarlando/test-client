@@ -33,5 +33,6 @@ export class ChatComponent implements AfterViewInit {
     this.stream = await navigator.mediaDevices.getUserMedia(mediaConstraint);
     this.video.nativeElement.srcObject = this.stream;
   }
+  mute(){}
 
 }

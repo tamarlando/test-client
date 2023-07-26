@@ -1,5 +1,5 @@
 <div>
     <p>{{participant.name}} - {{role[participant.role]}}</p>
     <video #video [autoplay]="true" [muted]="participant | permission"></video>
-    <button [disabled]="!(participant | permission)">mute</button>
+    <button [disabled]="!(participant | permission)" (click)="mute()">mute</button>
 </div>
